@@ -8,6 +8,7 @@ import com.plangenerator.service.RepaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import javax.persistence.EntityExistsException;
 import javax.validation.Valid;
@@ -21,6 +22,7 @@ import java.util.*;
  * <p/>
  */
 @RestController
+@EnableWebMvc
 @RequestMapping("v1/repayment")
 public class MainController {
 
