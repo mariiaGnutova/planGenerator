@@ -48,8 +48,8 @@ public class DefaultRepaymentService implements RepaymentService{
 
         try
         {
-            DataInit dataInit = new DataInit(repaymentDAO);
-            dataInit.run(amount, rate, duration, startDate);
+            DataInit dataInit = new DataInit(repaymentDAO, amount, rate, duration, startDate);
+            dataInit.run();
 
         }
         catch (Exception e)
