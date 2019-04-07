@@ -42,7 +42,7 @@ public class MainController {
         return output.toString();
     }
 
-    @PostMapping
+    @RequestMapping(value = "/response", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
     public  List<RepaymentDTO> createRepayment(@Valid @RequestParam(value = "loanAmount") double amount,
                                               @RequestParam( value = "nominalRate") double rate,
@@ -51,8 +51,6 @@ public class MainController {
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss'Z'");
         LocalDate parsedDate = LocalDate.parse(startDate, formatter);
-        System.out.println("Date:  " + parsedDate.plusMonths(3));
-
         return RepaymentMapper.makeRepaymentDTOList(repaymentService.create(amount, rate, duration, parsedDate));
     }
 }
