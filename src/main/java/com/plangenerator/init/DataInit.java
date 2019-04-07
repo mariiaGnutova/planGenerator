@@ -1,35 +1,25 @@
 package com.plangenerator.init;
 
 import com.plangenerator.entity.RepaymentDO;
-import org.springframework.stereotype.Component;
 import com.plangenerator.dataAccessObject.RepaymentDAO;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.TimeZone;
-
+import java.time.LocalDate;
 import static java.lang.Math.pow;
-
-
-//@Component
 
 public class DataInit {
 
     private RepaymentDAO repaymentDAO;
-    private static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
-    private Calendar calendar;
     private double longAmount;
     private double debitInterest;
     private int duration;
-    private Date startDate;
+    private LocalDate startDate;
     private double initialOutstandingPrincipal;
     private double annuity;
     private boolean firstInitial;
-    private Date date;
+    private LocalDate date;
 
 
-    public DataInit(RepaymentDAO repaymentDAO, double longAmount, double debitInterest, int duration, Date startDate) {
+    public DataInit(RepaymentDAO repaymentDAO, double longAmount, double debitInterest, int duration, LocalDate startDate) {
         this.repaymentDAO = repaymentDAO;
         this.longAmount = longAmount;
         this.debitInterest = debitInterest;
@@ -41,8 +31,6 @@ public class DataInit {
         dropTable(repaymentDAO);
         annuity = calculateAnnuity();
         date = startDate;
-        calendar = Calendar.getInstance();
-        calendar.setTime(date);
         initialOutstandingPrincipal = 0;
 
         firstInitial = true;
@@ -81,7 +69,7 @@ public class DataInit {
         repaymentDAO.save(repaymentDO);
 
         initialOutstandingPrincipal = remainingOutstandingPrincipal;
-        date = nextMonth(repaymentDO);
+        date = date.plusMonths(1);
     }
 
     private double calculateAnnuity() {
@@ -93,13 +81,4 @@ public class DataInit {
         repaymentDAO.deleteAll();
     }
 
-
-    public Date nextMonth (RepaymentDO repaymentDO){
-        dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
-      //  calendar = Calendar.getInstance(TimeZone.getTimeZone("UTC"));
-        calendar.add(Calendar.MONTH, 1);
-        calendar.set(Calendar.DATE, calendar.getActualMinimum(Calendar.DAY_OF_MONTH));
-        repaymentDAO.save(repaymentDO);
-        return calendar.getTime();
-    }
 }

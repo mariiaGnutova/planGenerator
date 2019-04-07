@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.persistence.EntityExistsException;
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 
@@ -42,10 +42,8 @@ public class DefaultRepaymentService implements RepaymentService{
      */
     @Override
     public List<RepaymentDO> create(@RequestParam double amount,@RequestParam double rate, @RequestParam int duration,
-                                    @RequestParam Date startDate) throws EntityExistsException
+                                    @RequestParam LocalDate startDate) throws EntityExistsException
     {
-        RepaymentDO repayment;
-
         try
         {
             DataInit dataInit = new DataInit(repaymentDAO, amount, rate, duration, startDate);

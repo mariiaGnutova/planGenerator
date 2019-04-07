@@ -1,26 +1,26 @@
 package com.plangenerator.entity;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
-@Table(name = "PLANEGENERATOR")  // TILGUNGSPLAN
-public class RepaymentDO {  // TildungDO
+@Table(name = "PLANEGENERATOR")
+public class RepaymentDO {
 
     @Id
     @GeneratedValue
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Temporal(TemporalType.DATE)
+
     @Column(name = "date", nullable = false)
-    private Date date;
+    private LocalDate date;
 
     @Column(name = "borrowerPaymentAmount", nullable = false)
     private double annuity;
 
     @Column(name = "principal", nullable = false)
-    private double principal;  // Tildung
+    private double principal;
 
     @Column(name = "interest", nullable = false)
     private double interest;
@@ -40,13 +40,13 @@ public class RepaymentDO {  // TildungDO
         this.id = id;
     }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
-    }  // getDatum
+    }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDate date) {
         this.date = date;
-    }  // setDatum
+    }
 
     public double getInitialOutstandingPrincipal() {
         return initialOutstandingPrincipal;
@@ -54,23 +54,23 @@ public class RepaymentDO {  // TildungDO
 
     public void setInitialOutstandingPrincipal(double initialOutstandingPrincipal) {
         this.initialOutstandingPrincipal = initialOutstandingPrincipal;
-    }  // setRestschuld
+    }
 
     public double getInterest() {
         return interest;
-    }  // getZinsen
+    }
 
     public void setInterest(double interest) {
         this.interest = interest;
-    }  // setZinsen
+    }
 
     public double getPrincipal() {
         return principal;
-    }  // getTildung
+    }
 
     public void setPrincipal(double principal) {
         this.principal = principal;
-    }  // setTildung
+    }
 
     public double getAnnuity() {
         return annuity;
@@ -88,7 +88,7 @@ public class RepaymentDO {  // TildungDO
         this.remainingOutstandingPrincipal = remainingOutstandingPrincipal;
     }
 
-    public RepaymentDO(Date date, double annuity, double principal, double interest, double initialOutstandingPrincipal,
+    public RepaymentDO(LocalDate date, double annuity, double principal, double interest, double initialOutstandingPrincipal,
                        double remainingOutstandingPrincipal) {
         this.date = date;
         this.annuity = annuity;

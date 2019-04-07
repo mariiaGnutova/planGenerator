@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.EntityExistsException;
 import javax.validation.Valid;
-import java.text.DateFormat;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 /**
@@ -48,10 +48,11 @@ public class MainController {
                                               @RequestParam( value = "nominalRate") double rate,
                                               @RequestParam( value = "duration") int duration,
                                               @RequestParam (value = "startDate") String startDate) throws EntityExistsException, ParseException {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
 
-        dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
-        Date date = dateFormat.parse(startDate);
-        return RepaymentMapper.makeRepaymentDTOList(repaymentService.create(amount, rate, duration, date));
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss'Z'");
+        LocalDate parsedDate = LocalDate.parse(startDate, formatter);
+        System.out.println("Date:  " + parsedDate.plusMonths(3));
+
+        return RepaymentMapper.makeRepaymentDTOList(repaymentService.create(amount, rate, duration, parsedDate));
     }
 }

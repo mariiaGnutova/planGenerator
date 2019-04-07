@@ -6,18 +6,14 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.validation.constraints.NotNull;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.time.LocalDate;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class RepaymentDTO {
     @JsonIgnore
     private Long id;
 
-    @NotNull(message = "Date can not be null!")
-    private Date date;
+    private LocalDate date;
 
     @NotNull(message = "Annuity can not be null!")
     private Double annuity;
@@ -36,7 +32,7 @@ public class RepaymentDTO {
 
     private RepaymentDTO(){}
 
-    private RepaymentDTO(Long id, Date date, Double annuity, Double principal, Double interest,
+    private RepaymentDTO(Long id, LocalDate date, Double annuity, Double principal, Double interest,
                          Double initialOutstandingPrincipal, Double remainingOutstandingPrincipal) {
         this.id = id;
         this.date = date;
@@ -57,9 +53,7 @@ public class RepaymentDTO {
         return id;
     }
 
-    public Date getDate() {
-
- //       System.out.println("Date: " + date);
+    public LocalDate getDate() {
         return date;
     }
 
@@ -85,7 +79,7 @@ public class RepaymentDTO {
 
     public static class RepaymentDTOBuilder{
         private Long id;
-        private Date date;
+        private LocalDate date;
         private Double annuity;
         private Double principal;
         private Double interest;
@@ -97,7 +91,7 @@ public class RepaymentDTO {
             return this;
         }
 
-        public RepaymentDTOBuilder setDate(Date date){
+        public RepaymentDTOBuilder setDate(LocalDate date){
             this.date = date;
             return this;
         }
@@ -131,6 +125,7 @@ public class RepaymentDTO {
         {
             return new RepaymentDTO(id, date, annuity, principal, interest,
                     initialOutstandingPrincipal, remainingOutstandingPrincipal);
+
         }
 
     }
