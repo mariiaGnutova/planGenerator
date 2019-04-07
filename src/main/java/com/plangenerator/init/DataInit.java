@@ -16,7 +16,7 @@ import java.util.TimeZone;
 public class DataInit {
 
     private RepaymentDAO repaymentDAO;
-    private static final SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
+    private static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
     private Calendar calendar;
 
 
@@ -28,8 +28,9 @@ public class DataInit {
         public void run( double longAmount, double debitInterest, int duration, Date startDate){
         dropTable(repaymentDAO);
         double annuity = 219.36; //rate
-            dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+      
             Date date = startDate;
+
         calendar = Calendar.getInstance();
         calendar.setTime(date);
         double initialOutstandingPrincipal = 0;

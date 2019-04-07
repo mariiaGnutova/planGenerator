@@ -59,7 +59,7 @@ public class RepaymentDTO {
 
     public Date getDate() {
 
-        System.out.println("Date: " + date);
+ //       System.out.println("Date: " + date);
         return date;
     }
 

@@ -14,9 +14,7 @@ import javax.validation.Valid;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 /**
  * All operations with a repayment will be routed by this controller.
@@ -50,13 +48,10 @@ public class MainController {
                                               @RequestParam( value = "nominalRate") double rate,
                                               @RequestParam( value = "duration") int duration,
                                               @RequestParam (value = "startDate") String startDate) throws EntityExistsException, ParseException {
-        DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
-        Date date = dateFormat.parse(startDate);
-        Calendar cal = Calendar.getInstance();
-        cal.setTime(date);
-        cal.add(Calendar.SECOND, 1);
-        date = cal.getTime();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
 
+        dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+        Date date = dateFormat.parse(startDate);
         return RepaymentMapper.makeRepaymentDTOList(repaymentService.create(amount, rate, duration, date));
     }
 }
