@@ -1,11 +1,10 @@
 package com.plangenerator.controller;
 
-import com.plangenerator.AbstractTest;
-
 import org.json.JSONObject;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.*;
 import static org.hamcrest.Matchers.hasKey;
 import static org.hamcrest.Matchers.hasSize;
@@ -43,6 +42,13 @@ public class MainControllerTest  extends AbstractTest{
         super.setUp();
     }
 
+    @Autowired
+    private MainController controller;
+
+    @Test
+    public void contextLoads() {
+        assertThat(controller).isNotNull();
+    }
 
     @Test
     public void testCreateProduct() throws Exception {

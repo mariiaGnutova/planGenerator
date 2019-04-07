@@ -1,9 +1,10 @@
-package com.plangenerator;
+package com.plangenerator.controller;
 
 import java.io.IOException;
 import java.time.LocalDate;
 
 import com.google.common.collect.Iterators;
+import com.plangenerator.DemoApplication;
 import com.plangenerator.dataAccessObject.RepaymentDAO;
 import com.plangenerator.entity.RepaymentDO;
 import org.junit.Test;

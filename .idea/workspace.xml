@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="484b3937-5c54-4331-8e21-76522b4d3aa9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/plangenerator/AbstractTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/plangenerator/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/plangenerator/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/plangenerator/AbstractTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/plangenerator/controller/AbstractTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/plangenerator/DemoApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/plangenerator/controller/MainControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/plangenerator/controller/MainControllerTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,26 +25,26 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="10" />
-          <entry key="java" value="55" />
+          <entry key="java" value="57" />
           <entry key="xml" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="10" />
-          <entry key="JAVA" value="55" />
+          <entry key="JAVA" value="57" />
           <entry key="XML" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2091" />
+          <entry key="java" value="2192" />
           <entry key="xml" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2091" />
+          <entry key="JAVA" value="2192" />
           <entry key="XML" value="9" />
         </counts>
       </usages-collector>
@@ -54,17 +55,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
+            <state relative-caret-position="354">
               <caret line="77" column="10" selection-start-line="77" selection-start-column="10" selection-end-line="77" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/plangenerator/DemoApplicationTests.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/plangenerator/DemoApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-316">
-              <caret line="23" selection-start-line="23" selection-end-line="23" selection-end-column="15" />
+            <state relative-caret-position="343">
+              <caret line="27" column="25" lean-forward="true" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -72,8 +76,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/plangenerator/controller/MainControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-610">
-              <caret line="21" column="52" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
+            <state relative-caret-position="735">
+              <caret line="51" selection-end-line="132" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1625#1626#0" expanded="true" />
+                <element signature="e#1675#1676#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -95,8 +104,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -129,12 +138,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/plangenerator/mapper/RepaymentMapper.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/plangenerator/dataAccessObject/RepaymentDAO1Test.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/plangenerator/dataAccessObject/RepaymentDAOTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/plangenerator/DemoApplicationTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/plangenerator/AbstractTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/plangenerator/controller/TestMainControllerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/plangenerator/TestMainControllerTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/plangenerator/controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/plangenerator/DemoApplicationTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/plangenerator/DemoApplicationTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/plangenerator/controller/MainControllerTest.java" />
       </list>
     </option>
@@ -147,9 +157,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="589" />
+    <option name="x" value="110" />
     <option name="y" value="23" />
-    <option name="width" value="691" />
+    <option name="width" value="1170" />
     <option name="height" value="777" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -220,15 +230,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="plangenerator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="planGenerator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="plangenerator" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -244,10 +245,12 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.plangenerator" />
       <recent name="com.plangenerator.controller" />
       <recent name="com.plangenerator.dataAccessObject" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.plangenerator.controller" />
       <recent name="com.plangenerator" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -266,7 +269,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MainControllerTest">
+  <component name="RunManager" selected="Application.DemoApplication">
     <configuration name="DemoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.plangenerator.DemoApplication" />
       <module name="demo" />
@@ -280,82 +283,75 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DemoApplicationTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.plangenerator.DemoApplicationTest" />
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.plangenerator.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoApplicationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.plangenerator.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.plangenerator" />
+      <option name="MAIN_CLASS_NAME" value="com.plangenerator.DemoApplicationTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.plangenerator.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.plangenerator" />
+      <option name="MAIN_CLASS_NAME" value="com.plangenerator.DemoApplicationTests" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.plangenerator.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.plangenerator.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.plangenerator.controller.MainControllerTest" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MainControllerTest.createProductAndCheckValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="demo" />
-      <extension name="coverage">
-        <pattern>
           <option name="PATTERN" value="com.plangenerator.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.plangenerator.controller" />
       <option name="MAIN_CLASS_NAME" value="com.plangenerator.controller.MainControllerTest" />
-      <option name="METHOD_NAME" value="createProductAndCheckValue" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MainControllerTest.testChecklastObject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.plangenerator.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.plangenerator.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.plangenerator.controller.MainControllerTest" />
-      <option name="METHOD_NAME" value="testChecklastObject" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MainControllerTest.testCreateProductAndCheckValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.plangenerator.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.plangenerator.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.plangenerator.controller.MainControllerTest" />
-      <option name="METHOD_NAME" value="testCreateProductAndCheckValue" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.DemoApplication" />
       <item itemvalue="JUnit.MainControllerTest" />
-      <item itemvalue="JUnit.MainControllerTest.createProductAndCheckValue" />
-      <item itemvalue="JUnit.MainControllerTest.testChecklastObject" />
-      <item itemvalue="JUnit.MainControllerTest.testCreateProductAndCheckValue" />
+      <item itemvalue="JUnit.DemoApplicationTests" />
+      <item itemvalue="JUnit.DemoApplicationTest" />
+      <item itemvalue="Application.DemoApplicationTest" />
+      <item itemvalue="Application.DemoApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MainControllerTest" />
-        <item itemvalue="JUnit.MainControllerTest.testCreateProductAndCheckValue" />
-        <item itemvalue="JUnit.MainControllerTest.testChecklastObject" />
-        <item itemvalue="JUnit.MainControllerTest.createProductAndCheckValue" />
         <item itemvalue="Application.DemoApplication" />
+        <item itemvalue="JUnit.MainControllerTest" />
+        <item itemvalue="JUnit.DemoApplicationTest" />
+        <item itemvalue="Application.DemoApplicationTest" />
+        <item itemvalue="JUnit.DemoApplicationTests" />
       </list>
     </recent_temporary>
   </component>
@@ -373,50 +369,50 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MainControllerTest_testChecklastObject - 2019.04.07 at 22h 02m 11s.xml">
-      <configuration name="MainControllerTest.testChecklastObject" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MainControllerTest_testChecklastObject - 2019.04.07 at 22h 02m 42s.xml">
-      <configuration name="MainControllerTest.testChecklastObject" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MainControllerTest_testCreateProductAndCheckValue - 2019.04.07 at 22h 03m 00s.xml">
-      <configuration name="MainControllerTest.testCreateProductAndCheckValue" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MainControllerTest_testCreateProductAndCheckValue - 2019.04.07 at 22h 03m 55s.xml">
-      <configuration name="MainControllerTest.testCreateProductAndCheckValue" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MainControllerTest_testCreateProductAndCheckValue - 2019.04.07 at 22h 04m 45s.xml">
-      <configuration name="MainControllerTest.testCreateProductAndCheckValue" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MainControllerTest_testCreateProductAndCheckValue - 2019.04.07 at 22h 07m 45s.xml">
-      <configuration name="MainControllerTest.testCreateProductAndCheckValue" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MainControllerTest_testCreateProductAndCheckValue - 2019.04.07 at 22h 08m 22s.xml">
-      <configuration name="MainControllerTest.testCreateProductAndCheckValue" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MainControllerTest - 2019.04.07 at 22h 08m 41s.xml">
-      <configuration name="MainControllerTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="MainControllerTest - 2019.04.07 at 22h 09m 16s.xml">
       <configuration name="MainControllerTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="MainControllerTest - 2019.04.07 at 22h 10m 09s.xml">
       <configuration name="MainControllerTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="MainControllerTest - 2019.04.07 at 22h 13m 16s.xml">
+      <configuration name="MainControllerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoApplicationTest - 2019.04.07 at 22h 40m 23s.xml">
+      <configuration name="DemoApplicationTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoApplicationTest - 2019.04.07 at 22h 42m 27s.xml">
+      <configuration name="DemoApplicationTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoApplicationTest - 2019.04.07 at 22h 51m 30s.xml">
+      <configuration name="DemoApplicationTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoApplicationTest - 2019.04.07 at 22h 56m 09s.xml">
+      <configuration name="DemoApplicationTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainControllerTest - 2019.04.07 at 23h 01m 42s.xml">
+      <configuration name="MainControllerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainControllerTest - 2019.04.07 at 23h 02m 13s.xml">
+      <configuration name="MainControllerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainControllerTest - 2019.04.07 at 23h 02m 39s.xml">
+      <configuration name="MainControllerTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="589" y="23" width="691" height="777" extended-state="0" />
+    <frame x="110" y="23" width="1170" height="777" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info id="UI Designer" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.46190476" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3289007" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.32846716" />
+      <window_info anchor="bottom" id="Messages" weight="0.32739726" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.44963503" />
@@ -512,7 +508,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/plangenerator/AbstractTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/plangenerator/controller/AbstractTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-43">
           <caret line="34" selection-start-line="34" selection-end-line="34" />
@@ -569,16 +565,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/plangenerator/DemoApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -652,20 +638,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/plangenerator/DemoApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-316">
-          <caret line="23" selection-start-line="23" selection-end-line="23" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="77" column="10" selection-start-line="77" selection-start-column="10" selection-end-line="77" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/plangenerator/controller/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-214">
@@ -683,10 +655,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/plangenerator/DemoApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="77" column="10" selection-start-line="77" selection-start-column="10" selection-end-line="77" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/plangenerator/DemoApplicationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/plangenerator/DemoApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="27" column="25" lean-forward="true" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/plangenerator/controller/MainControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-610">
-          <caret line="21" column="52" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
+        <state relative-caret-position="735">
+          <caret line="51" selection-end-line="132" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1625#1626#0" expanded="true" />
+            <element signature="e#1675#1676#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
