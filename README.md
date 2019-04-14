@@ -6,7 +6,7 @@ Generates Repayment Plan for given Loan parameters.
 
 ## Links
 + Daten Bunk H2 http://localhost:8080/h2-console/
-+ Swager2 http://localhost:8080/swagger-ui.html
++ Swager2 http://localhost:8080/swagger-ui.html#/main-controller/createRepaymentUsingPOST
 
 ## How to use
 + send POST request to /v1/repayment/response with payload:
