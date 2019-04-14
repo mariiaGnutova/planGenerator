@@ -3,7 +3,8 @@ package com.plangenerator.init;
 import com.plangenerator.entity.RepaymentDO;
 import com.plangenerator.dataAccessObject.RepaymentDAO;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 import static java.lang.Math.pow;
 
 public class DataInit {
@@ -12,14 +13,14 @@ public class DataInit {
     private double longAmount;
     private double debitInterest;
     private int duration;
-    private LocalDate startDate;
+    private LocalDateTime startDate;
     private double initialOutstandingPrincipal;
     private double annuity;
     private boolean firstInitial;
-    private LocalDate date;
+    private LocalDateTime date;
 
 
-    public DataInit(RepaymentDAO repaymentDAO, double longAmount, double debitInterest, int duration, LocalDate startDate) {
+    public DataInit(RepaymentDAO repaymentDAO, double longAmount, double debitInterest, int duration, LocalDateTime startDate) {
         this.repaymentDAO = repaymentDAO;
         this.longAmount = longAmount;
         this.debitInterest = debitInterest;
@@ -27,7 +28,7 @@ public class DataInit {
         this.startDate = startDate;
     }
 
-        public void run(){
+        public void createPaymentPlan(){
         dropTable(repaymentDAO);
         annuity = calculateAnnuity();
         date = startDate;

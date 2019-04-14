@@ -3,6 +3,7 @@ package com.plangenerator.mapper;
 import com.plangenerator.dataTransferObject.RepaymentDTO;
 import com.plangenerator.entity.RepaymentDO;
 
+import java.time.format.DateTimeFormatter;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -12,13 +13,16 @@ public class RepaymentMapper {
 
     public static RepaymentDO makeRepaymentDO(RepaymentDTO repaymentDTO)
     {
-        return new RepaymentDO(repaymentDTO.getDate(), repaymentDTO.getAnnuity(), repaymentDTO.getPrincipal(),
-                repaymentDTO.getInterest(), repaymentDTO.getInitialOutstandingPrincipal(),
-                repaymentDTO.getRemainingOutstandingPrincipal());
+        return new RepaymentDO(repaymentDTO.getDate(),
+                repaymentDTO.getAnnuity(),
+                repaymentDTO.getPrincipal(),
+                repaymentDTO.getInterest(),
+                repaymentDTO.getInitialOutstandingPrincipal(),
+                repaymentDTO.getRemainingOutstandingPrincipal()
+        );
     }
 
     public static RepaymentDTO makeRepaymentDTO(RepaymentDO repaymentDO) {
-
         RepaymentDTO.RepaymentDTOBuilder repaymentDTOBuilder = RepaymentDTO.newBuilder()
                 .setId(repaymentDO.getId())
                 .setDate(repaymentDO.getDate())

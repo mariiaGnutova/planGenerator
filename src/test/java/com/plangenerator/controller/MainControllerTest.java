@@ -92,9 +92,7 @@ public class MainControllerTest  extends AbstractTest{
 
         mockMvc.perform(createMessage)
                 .andExpect(status().isCreated())
-                .andExpect(jsonPath("$[0].date[0]", is(2018)))
-                .andExpect(jsonPath("$[0].date[1]", is(1)))
-                .andExpect(jsonPath("$[0].date[2]", is(1)))
+                .andExpect(jsonPath("$[0].date", is ("2018-01-01T00:00:01Z")))
                 .andExpect(jsonPath("$[0].annuity", is(219.36)))
                 .andExpect(jsonPath("$[0].principal", is(198.53)))
                 .andExpect(jsonPath("$[0].interest", is (20.83)))
@@ -119,9 +117,7 @@ public class MainControllerTest  extends AbstractTest{
 
         mockMvc.perform(createMessage)
                 .andExpect(status().isCreated())
-                .andExpect(jsonPath("$[23].date[0]", is(2019)))
-                .andExpect(jsonPath("$[23].date[1]", is(12)))
-                .andExpect(jsonPath("$[23].date[2]", is(1)))
+                .andExpect(jsonPath("$[23].date", is ("2019-12-01T00:00:01Z")))
                 .andExpect(jsonPath("$[23].annuity", is(219.28)))
                 .andExpect(jsonPath("$[23].principal", is(218.37)))
                 .andExpect(jsonPath("$[23].interest", is (0.91)))

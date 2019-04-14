@@ -1,19 +1,20 @@
 package com.plangenerator.dataTransferObject;
 
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.validation.constraints.NotNull;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class RepaymentDTO {
     @JsonIgnore
     private Long id;
 
-    private LocalDate date;
+    private LocalDateTime date;
 
     @NotNull(message = "Annuity can not be null!")
     private Double annuity;
@@ -32,7 +33,7 @@ public class RepaymentDTO {
 
     private RepaymentDTO(){}
 
-    private RepaymentDTO(Long id, LocalDate date, Double annuity, Double principal, Double interest,
+    private RepaymentDTO(Long id, LocalDateTime date, Double annuity, Double principal, Double interest,
                          Double initialOutstandingPrincipal, Double remainingOutstandingPrincipal) {
         this.id = id;
         this.date = date;
@@ -48,12 +49,13 @@ public class RepaymentDTO {
         return new RepaymentDTOBuilder();
     }
 
-   @JsonProperty
+    @JsonProperty
     public Long getId() {
         return id;
     }
 
-    public LocalDate getDate() {
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'")
+    public LocalDateTime getDate() {
         return date;
     }
 
@@ -79,7 +81,7 @@ public class RepaymentDTO {
 
     public static class RepaymentDTOBuilder{
         private Long id;
-        private LocalDate date;
+        private LocalDateTime date;
         private Double annuity;
         private Double principal;
         private Double interest;
@@ -91,7 +93,7 @@ public class RepaymentDTO {
             return this;
         }
 
-        public RepaymentDTOBuilder setDate(LocalDate date){
+        public RepaymentDTOBuilder setDate(LocalDateTime date){
             this.date = date;
             return this;
         }

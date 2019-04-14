@@ -1,7 +1,7 @@
 package com.plangenerator.entity;
 
 import javax.persistence.*;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "PLANEGENERATOR")
@@ -14,7 +14,7 @@ public class RepaymentDO {
 
 
     @Column(name = "date", nullable = false)
-    private LocalDate date;
+    private LocalDateTime date;
 
     @Column(name = "borrowerPaymentAmount", nullable = false)
     private double annuity;
@@ -40,11 +40,11 @@ public class RepaymentDO {
         this.id = id;
     }
 
-    public LocalDate getDate() {
+    public LocalDateTime getDate() {
         return date;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(LocalDateTime date) {
         this.date = date;
     }
 
@@ -88,7 +88,7 @@ public class RepaymentDO {
         this.remainingOutstandingPrincipal = remainingOutstandingPrincipal;
     }
 
-    public RepaymentDO(LocalDate date, double annuity, double principal, double interest, double initialOutstandingPrincipal,
+    public RepaymentDO(LocalDateTime date, double annuity, double principal, double interest, double initialOutstandingPrincipal,
                        double remainingOutstandingPrincipal) {
         this.date = date;
         this.annuity = annuity;

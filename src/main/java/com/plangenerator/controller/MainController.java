@@ -1,5 +1,7 @@
 package com.plangenerator.controller;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import com.plangenerator.dataAccessObject.RepaymentDAO;
 import com.plangenerator.dataTransferObject.RepaymentDTO;
 import com.plangenerator.entity.RepaymentDO;
@@ -13,7 +15,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import javax.persistence.EntityExistsException;
 import javax.validation.Valid;
 import java.text.ParseException;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
@@ -28,6 +30,7 @@ public class MainController {
 
     private final RepaymentService repaymentService;
     private final RepaymentDAO repaymentDAO;
+
 
     @Autowired
     private MainController(final RepaymentService repaymentService, RepaymentDAO repaymentDAO){
@@ -52,7 +55,7 @@ public class MainController {
                                               @RequestParam (value = "startDate") String startDate) throws EntityExistsException, ParseException {
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss'Z'");
-        LocalDate parsedDate = LocalDate.parse(startDate, formatter);
+        LocalDateTime parsedDate = LocalDateTime.parse(startDate, formatter);
         return RepaymentMapper.makeRepaymentDTOList(repaymentService.create(amount, rate, duration, parsedDate));
     }
 }
